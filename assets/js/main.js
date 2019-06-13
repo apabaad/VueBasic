@@ -34,7 +34,8 @@ Vue.component('product', {
 				v-bind:style ="{backgroundColor: item.itemColor}" 
 				@mouseover="updateItem(index)">
 				</div>
-
+				
+				<button class="btn btn-primary btn-sm" v-on:click="addToCart">Add to Cart </button>
 			</div>
 			</div>
 		`,
@@ -101,14 +102,14 @@ var fruit = new Vue({
 	
 	data: {
 		premium: true,
-		cart: 0
+		cart: 0,
 	},
 	
 
 	methods: {
 		updateCart(){
 			this.cart +=1
-		}
+		},
 
 	}
 
